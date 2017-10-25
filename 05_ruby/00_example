@@ -1,0 +1,5 @@
+#!/usr/bin/ruby
+# Ruby Example
+ puts ("hola")
+ puts "Que tal"
+
