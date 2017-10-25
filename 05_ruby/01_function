@@ -3,7 +3,8 @@
 
   def greet(name)
       puts "hola" + name
-      puts "hola #{name}"
+      puts "o"
+      puts "hola#{name}"
   end
 
   greet "David"
