@@ -26,3 +26,7 @@ En el cpp se escriben las funciones y se pone el .h
 3.-Movuemos el libmates.so a la carpeta lib
 4.-gcc -c -Iinclude uso.cpp
 5.-gcc -o uso uso.o -Llib -lmates
+
+al ejecutar si se a cambiado la ruta no funciona. hay que cambiarla
+LD_LIBRARY_PATH='pwd'/lib
+export LD_LIBRARY_PATH
