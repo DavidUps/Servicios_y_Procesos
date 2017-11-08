@@ -30,3 +30,10 @@ En el cpp se escriben las funciones y se pone el .h
 al ejecutar si se a cambiado la ruta no funciona. hay que cambiarla
 LD_LIBRARY_PATH='pwd'/lib
 export LD_LIBRARY_PATH
+
+¡Cargar modulos!
+dlopen (*.so*) -> Cargalo en memoria.
+       (*.so*, RTLD_LAZY) -> Cargalo en memoria cuando se genere la primera llamada.
+
+
+
