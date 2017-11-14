@@ -16,5 +16,9 @@ Cierras el tubo 4
 exec 4<&-
 echo $i
 
+----------------------------------
+guarda lo que meta el usuario
+  echo $1 > tuberia.txt
 
-
+Guarda hasta final de linea
+  while IFS = read -r -n1 char
