@@ -1,0 +1,6 @@
+#!/usr/bin/ruby
+#Ejemplo de clase
+
+name = [ "Sussane", "Cindy", "Nancy", "Stacy", "Caroline", "Chloe", "Stephanie", "Lucy"]
+steward = []
+7.times { |x| steward.push( new Steward.new ( name[x]))}

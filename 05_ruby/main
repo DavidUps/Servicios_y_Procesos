@@ -1,0 +1,11 @@
+#!/usr/bin/ruby
+#Ejemplo de clase
+
+name = [ "Sussane", "Cindy", "Nancy", "Stacy", "Caroline", "Chloe", "Stephanie", "Lucy"]
+steward = []
+#cierres en ruby
+7.times { |x| steward.push( Steward.new ( name[x]))}
+
+puts "We have #{Steward.count} stewards"
+
+staff.each{ |s| s.greet "Txema"}

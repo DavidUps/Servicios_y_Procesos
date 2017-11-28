@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo $1 > tuberia.txt
+exec 4< tuberia.txt
+unlink tuberia.txt
+
+sleep 1
+
+while IFS= read -r -n1 char
+do
+    echo -n "$char"
+    sleep 0.1
+done <&4
+
+exec 4<&-
