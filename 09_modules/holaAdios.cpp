@@ -18,7 +18,7 @@ void run(const char *mod_name, const char *funct_name)
 
     if (!modulo)
         salir("No se ha encontrado el módulo");
-    fn = (void (*)()) dlsym(modulo, funct_name); //Creas un molde de void (*fn)() = NULL || Función que le quieras pasar.
+        fn = (void (*)()) dlsym(modulo, funct_name); //Creas un molde de void (*fn)() = NULL || Función que le quieras pasar.
 
     if(!fn)
         salir("No se ha encontrado la muncion");
