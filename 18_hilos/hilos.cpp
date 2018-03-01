@@ -8,11 +8,11 @@ struct Tpila{
     int *numImpar;
     int *numPar;
     int cont;
-}   primos;
+}   numeros;
 
 
 void push_par(struct Tpila *numeros, int num){
-    numeros->numImpar[numeros->cont++] = num;
+    numeros->numPar[numeros->cont++] = num;
 }
 
 void push_impar(struct Tpila *numeros,int num){
@@ -23,9 +23,9 @@ void push_impar(struct Tpila *numeros,int num){
 void *numeros_comprobacion(void *){
     for(int i=0; i<MAX; i++){
         if(i%2==0){
-            push_par(i);
+            push_par(&numeros,i);
         }else{
-            push_impar(i);
+            push_impar(&numeros,i);
         }
     }
     return NULL;
@@ -33,8 +33,8 @@ void *numeros_comprobacion(void *){
 
 int main(int argc, char *argv[]){
 
-    primos.numImpar = (int *)malloc(MAX * sizeof(int));
-    primos.numPar   = (int *)malloc(MAX * sizeof(int));
+    numeros.numImpar = (int *)malloc(MAX * sizeof(int));
+    numeros.numPar   = (int *)malloc(MAX * sizeof(int));
 
     pthread_t hiloPares, hiloImpares;
 
@@ -44,5 +44,9 @@ int main(int argc, char *argv[]){
     pthread_join(hiloPares, NULL);
     pthread_join(hiloImpares, NULL);
 
+    for(int i=0; i<numeros.cont; i++)
+        printf("Hola Soy Tu Par - %i \n", numeros.numPar[i]);
+    for(int i=0; i<numeros.cont; i++)
+        printf("\t Hola Soy Tu Impar - %i \n", numeros.numImpar[i]);
     return EXIT_SUCCESS;
 }
