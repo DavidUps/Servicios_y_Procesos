@@ -1,0 +1,12 @@
+[Unit]
+Description=demonio de vim
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/vim --daemon
+ExecStop=/usr/bim/vim --eval"(kill-vim)"
+Enviroment=SSH_AUTO_SOCK=%t/keyring/ssh
+Restart=always
+
+[Install]
+WantedBy=default.target
